@@ -1,0 +1,22 @@
+{
+  "version": "first_feasible_mean_t0_v1",
+  "base_suite": "cec2017",
+  "calibration": {
+    "algorithm": "dsi",
+    "runs_per_instance": 5,
+    "seeds": [1, 2, 3, 4, 5],
+    "max_evaluations_per_run": 1000,
+    "feasibility": "All original inequalities g_j(x) <= 0; tolerance 0",
+    "statistic": "Arithmetic mean across runs of the objective at each run's first originally feasible evaluation; runs without a feasible point are excluded",
+    "source": "results/calibration_dsi_1000fe/cec2017_10d30d_5runs_20260919_parallel and results/calibration_dsi_1000fe/pilot_c05_d30_seed1"
+  },
+  "thresholds": {
+    "c01": {"10": 168919.01099288603, "30": 2167443.0220871517},
+    "c02": {"10": 48745.348712272826, "30": 239967.74238271383},
+    "c04": {"10": 569.3834584304535, "30": 1530.092313983737},
+    "c05": {"10": 66912.47728618358, "30": 413316.2837782929},
+    "c13": {"10": 28014.681979756348},
+    "c20": {"10": 5.551893090658293, "30": 14.922761554459843},
+    "c22": {"10": 29450.563405162775}
+  }
+}

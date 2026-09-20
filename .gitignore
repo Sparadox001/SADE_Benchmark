@@ -1,0 +1,36 @@
+# 结果/输出文件
+results/
+output/
+out/
+logs/
+*.log
+*.tmp
+*.csv
+*.xlsx
+*.pkl
+*.h5
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.mp4
+*.bin
+
+# 数据文件
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# IDE / 系统
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,38 @@
+{
+  "experiment": {
+    "name": "sade_dynamic_tightening_development",
+    "algorithms": ["sade_dynamic"],
+    "suites": ["cec2017"],
+    "problems": ["c01", "c05", "c20", "c22"],
+    "dimensions": [10, 30],
+    "runs": 3,
+    "first_seed": 1
+  },
+  "common": {
+    "max_evaluations": 300,
+    "population_size": 30,
+    "constraint_tolerance": 0.0
+  },
+  "algorithms": {
+    "sade_dynamic": {
+      "batch_size": 3,
+      "trials_per_target": 6,
+      "local_fraction": 0.2,
+      "surrogate_min_samples": 30,
+      "p_best_fraction": 0.2,
+      "distance_threshold": 0.001,
+      "dynamic_constraint_tightening": true,
+      "tightening_trigger_feasible_count": null,
+      "tightening_keep_ratio": 0.3,
+      "tightening_patience": 3,
+      "tightening_improvement_tol": 0.001,
+      "tightening_max_tightens": 100,
+      "tightening_min_ratio": 0.001
+    }
+  },
+  "recording": {
+    "save_evaluations": true,
+    "save_populations": true,
+    "save_candidate_pools": false
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "experiment": {
+    "name": "cec2017_objcap_first_mean_t0_v1_pilot",
+    "algorithms": ["sade", "sade_targeted", "dsi"],
+    "suites": ["cec2017_objcap_first_mean"],
+    "problems": ["all"],
+    "dimensions": [10, 30],
+    "runs": 1,
+    "first_seed": 101
+  },
+  "common": {
+    "max_evaluations": 300,
+    "population_size": 30,
+    "constraint_tolerance": 0.0
+  },
+  "recording": {
+    "save_evaluations": true,
+    "save_populations": false,
+    "save_candidate_pools": false
+  }
+}

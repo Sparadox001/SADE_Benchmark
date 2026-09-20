@@ -1,0 +1,35 @@
+{
+  "experiment": {
+    "name": "cec2017_high_dimension",
+    "algorithms": ["sade", "dsi"],
+    "suites": ["cec2017"],
+    "problems": ["all"],
+    "dimensions": [50, 100],
+    "runs": 30,
+    "first_seed": 1
+  },
+  "common": {
+    "max_evaluations": 300,
+    "population_size": 30,
+    "constraint_tolerance": 0.0
+  },
+  "algorithms": {
+    "sade": {
+      "batch_size": 10,
+      "trials_per_target": 6,
+      "local_fraction": 0.2,
+      "surrogate_min_samples": 80,
+      "p_best_fraction": 0.2,
+      "distance_threshold": 0.001
+    },
+    "dsi": {
+      "wmax": 10
+    }
+  },
+  "recording": {
+    "save_evaluations": true,
+    "save_populations": true,
+    "save_candidate_pools": false
+  }
+}
+

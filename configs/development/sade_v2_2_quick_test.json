@@ -1,0 +1,32 @@
+{
+  "experiment": {
+    "name": "sade_v2_2_quick_test",
+    "algorithms": ["sade_v2_2"],
+    "suites": ["cec2017"],
+    "problems": ["c05", "c22"],
+    "dimensions": [10],
+    "runs": 1,
+    "first_seed": 1
+  },
+  "common": {
+    "max_evaluations": 300,
+    "population_size": 30,
+    "constraint_tolerance": 0.0
+  },
+  "algorithms": {
+    "sade_v2_2": {
+      "batch_size": 3,
+      "trials_per_target": 6,
+      "local_fraction": 0.2,
+      "surrogate_min_samples": 30,
+      "p_best_fraction": 0.2,
+      "distance_threshold": 0.001,
+      "near_feasible_fraction": 0.2
+    }
+  },
+  "recording": {
+    "save_evaluations": true,
+    "save_populations": true,
+    "save_candidate_pools": false
+  }
+}

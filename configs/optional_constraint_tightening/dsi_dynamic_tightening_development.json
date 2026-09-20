@@ -1,0 +1,36 @@
+{
+  "experiment": {
+    "name": "dsi_dynamic_tightening_development",
+    "algorithms": ["dsi", "dsi_dynamic"],
+    "suites": ["cec2017"],
+    "problems": ["c01", "c05", "c20", "c22"],
+    "dimensions": [10, 30],
+    "runs": 3,
+    "first_seed": 1
+  },
+  "common": {
+    "max_evaluations": 300,
+    "population_size": 30,
+    "constraint_tolerance": 0.0
+  },
+  "algorithms": {
+    "dsi": {
+      "wmax": 10
+    },
+    "dsi_dynamic": {
+      "wmax": 10,
+      "dynamic_constraint_tightening": true,
+      "tightening_trigger_feasible_count": null,
+      "tightening_keep_ratio": 0.3,
+      "tightening_patience": 3,
+      "tightening_improvement_tol": 0.001,
+      "tightening_max_tightens": 100,
+      "tightening_min_ratio": 0.001
+    }
+  },
+  "recording": {
+    "save_evaluations": true,
+    "save_populations": true,
+    "save_candidate_pools": false
+  }
+}

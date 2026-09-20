@@ -1,0 +1,43 @@
+{
+  "experiment": {
+    "name": "sade_v2_cec_10d30d_25runs",
+    "algorithms": ["sade", "sade_v2", "dsi"],
+    "suites": ["cec2006", "cec2010", "cec2017"],
+    "problems": ["all"],
+    "dimensions": [10, 30],
+    "runs": 25,
+    "first_seed": 1
+  },
+  "common": {
+    "max_evaluations": 300,
+    "population_size": 30,
+    "constraint_tolerance": 0.0
+  },
+  "algorithms": {
+    "sade": {
+      "batch_size": 3,
+      "trials_per_target": 6,
+      "local_fraction": 0.2,
+      "surrogate_min_samples": 30,
+      "p_best_fraction": 0.2,
+      "distance_threshold": 0.001
+    },
+    "sade_v2": {
+      "batch_size": 3,
+      "trials_per_target": 6,
+      "local_fraction": 0.2,
+      "surrogate_min_samples": 30,
+      "p_best_fraction": 0.2,
+      "distance_threshold": 0.001,
+      "near_feasible_fraction": 0.2
+    },
+    "dsi": {
+      "wmax": 10
+    }
+  },
+  "recording": {
+    "save_evaluations": true,
+    "save_populations": true,
+    "save_candidate_pools": false
+  }
+}
